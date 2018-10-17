@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+<h1>New comment for <%=place.name%> </h1>
+
+<div class="form-div">
+	<form class="ui form" action="/secondpage/<%=place._id%>/comments" method="POST">
+	  <div class="field">
+	    <label>Comment Text</label>
+	    <input type="text" placeholder="text" name="comment[text]" required>
+	  </div>
+	  <button class="ui button" type="submit">Submit</button>
+	</form>
+</div>
+
+
+<% include partials/footer %>

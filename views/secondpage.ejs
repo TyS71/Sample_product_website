@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<h1>Second page</h1>
+<a href='/secondpage/new' id='create-button' class='ui yellow button'> Create new </a>
+
+	<% places.forEach(function(place){ %>
+	<div class='ui grid'>
+		<div class='four wide column'>
+			<img class='ui image' src="https://i.pinimg.com/736x/a4/8c/d6/a48cd68cb85fa6a82beb7085dd9fc085--open-floor-house-plans-dream-house-plans.jpg">
+		</div>
+		<div class='twelve wide column'>
+			<div class="ui segment">
+				<div class='name'>
+					<h2><%=place.name%></h2>
+				</div>
+				<div class='price'>
+					<h3>Price: $<%=place.price %></h3>
+				</div>
+				<div class='ui clearing divider'></div>
+				<h3>Description:</h3>
+					<p><%=place.description %></p>
+					<a href="/secondpage/<%= place._id %>">show </a>
+			</div>
+		</div>
+	</div>
+	<% }) %>
+
+<% include partials/footer %>

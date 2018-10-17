@@ -1,0 +1,39 @@
+#price-field{
+	max-width: 100px;
+}
+
+.form-div{
+	max-width: 650px;
+	padding: 35px;
+	margin: 60px auto;
+}
+
+.delete-form{
+	float: right;
+}
+
+.name{
+	display: inline-block;
+}
+
+.price{
+	float:right;
+}
+
+#create-button{
+	margin: 20px 0;
+}
+
+.image{
+	border-radius: 5px;
+	border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+body{
+	background-color: rgba(128, 204, 255);
+}
+
+.username{
+	float: left;
+	margin-right: 5px;
+}

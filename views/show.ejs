@@ -1,0 +1,53 @@
+<% include partials/header %>
+
+<div class='ui grid'>
+	<div class='eight wide column'>
+		<h1 class='ui header'><%=place.name %></h1>
+		<div class="ui clearing divider"></div>
+		<!-- Image div goes here -->
+		<div class='ui image'>
+			<img src='https://i.pinimg.com/736x/a4/8c/d6/a48cd68cb85fa6a82beb7085dd9fc085--open-floor-house-plans-dream-house-plans.jpg'>
+		</div>
+		<h4 class="ui horizontal divider header">
+		  <i class="tag icon"></i>
+		  Description
+		</h4>
+		<h4><%= place.description %> </h4>
+		<h4 class="ui horizontal divider header">
+			<i class="dollar sign icon"></i>
+		</h4>
+		<table class="ui definition table">
+		  <tbody>
+		    <tr>
+		      <td class="two wide column">price</td>
+		      <td><%= place.price %></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<a class="ui inverted yellow button" href='/secondpage/<%=place._id%>/edit'>Edit</a>
+		<form class='delete-form' action="/secondpage/<%= place._id %>?_method=DELETE" method="POST">
+			<button class='ui inverted red button'>Delete</button>
+		</form>
+	</div>
+
+	<div class='eight wide column'>
+		<h4 class="ui horizontal divider header">
+			<i class="sticky note outline icon"></i>
+			Comments
+		</h4>
+		<a class="ui inverted green button comment-button" href="/secondpage/<%=place._id%>/comments/new">Add Comment</a>
+			<% place.comments.forEach(function(comment){ %>
+				<div class="ui segment">
+					<h4 class='username'><%=comment.author.username%>:  </h4>
+					<p><%=comment.text%></p>
+				</div>
+			<% }) %>
+		</div>
+</div>
+
+
+	
+
+
+
+<% include partials/footer %>

@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<h1>New Page </h1>
+
+<div class="form-div">
+	<form class="ui form" action="/secondpage" method="POST">
+	  <div class="field">
+	    <label>Place Name</label>
+	    <input type="text" placeholder="name" name="name" required>
+	  </div>
+	  <div class="field">
+	    <label>Description</label>
+	    <input type="text" placeholder="description" name="description" required>
+	  </div>
+	  <div id="price-field"class="field">
+	    <label>Price</label>
+	    <input type="Number" placeholder="price" name="price" step="0.01">
+	  </div>
+	  <button class="ui button" type="submit">Submit</button>
+	</form>
+</div>
+
+
+<% include partials/footer %>
